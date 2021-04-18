@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech how-to, snippets, and collected tech recipes</title>
+    <link>http://tech.mycontributes.online/</link>
+    <description>Recent content on Tech how-to, snippets, and collected tech recipes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 16:03:23 +0100</lastBuildDate>
+    
+	<atom:link href="http://tech.mycontributes.online/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sitemap in Hugo static page generator</title>
+      <link>http://tech.mycontributes.online/hugo/sitemap/</link>
+      <pubDate>Fri, 09 Apr 2021 16:03:23 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/hugo/sitemap/</guid>
+      <description>&lt;p&gt;Hugo generates a default sitemap for your site containing all pages and links. Such sitemap can be customized.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shortcodes in Hugo static page generator</title>
+      <link>http://tech.mycontributes.online/hugo/shortcodes/</link>
+      <pubDate>Wed, 31 Mar 2021 16:03:23 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/hugo/shortcodes/</guid>
+      <description>&lt;p&gt;Shortcodes are used in .md files. They are a form of customizing the resulting html whenever the .md format does not gives what you need.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo from scratch, GitHub Pages, hidden sources</title>
+      <link>http://tech.mycontributes.online/hugo/hugo-from-scratch/</link>
+      <pubDate>Tue, 30 Mar 2021 16:03:23 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/hugo/hugo-from-scratch/</guid>
+      <description>&lt;p&gt;Instructions to build an Hugo site from scratch, manage it with git, and publish in GitHub Pages. In this scenario only the result files are being uploaded to Github Pages, not the source files.&lt;/p&gt;
+&lt;p&gt;The source files themselves are also in git. Intentionally the scenario is not publishing those sources publicly in GitHub.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
