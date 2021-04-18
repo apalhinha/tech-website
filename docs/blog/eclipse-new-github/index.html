@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>New Java project, Eclipse and GitHub - Tech how-to, snippets, and collected tech recipes</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="New Java project, Eclipse and GitHub" />
+<meta property="og:description" content="Context
+These steps were followed to create a totally new Eclipse project, in sync with GitHub" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tech.mycontributes.online/blog/eclipse-new-github/" />
+<meta property="article:published_time" content="2021-04-17T16:03:22+01:00" />
+<meta property="article:modified_time" content="2021-04-17T16:03:22+01:00" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Mainroad" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Mainroad</div>
+					<div class="logo__tagline">Tech how-to, snippets, and collected recipes</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">New Java project, Eclipse and GitHub</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-17T16:03:22&#43;01:00">2021-04-17</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="context">Context</h1>
+<p>These steps were followed to create a totally new Eclipse project, in sync with GitHub</p>
+<h1 id="step-by-step">Step by step</h1>
+<ul>
+<li>In GitHub, create a totally blank project (no readme, no license, no nothing)</li>
+<li>In Eclipse, created a Java project named &lsquo;snippet-collector&rsquo;.
+<ul>
+<li>Project root is in a folder synced with the cloud. Perhaps redundant, but there will be sources not managed by Git, so a backup is needed</li>
+<li>Used my_root / root_cloud / root_eclipse / Snippet Collector / snippet-collector</li>
+<li>Folders follow my naming convention, last one uses github naming convention
+<ul>
+<li>Eclipse configuration:</li>
+<li>Location: &hellip;\Snippet Collector\snippet-collector (folder is there)</li>
+<li>Project name: snippet-collector</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In Eclipse, create a first SnippetCollectorApp class, including the main() function</li>
+<li>In Eclipse,
+<ul>
+<li>Team</li>
+<li>Share Project</li>
+<li>Use or create repository in parent folder of project</li>
+<li>Create repository</li>
+<li>Finish</li>
+</ul>
+</li>
+<li>In Eclipse,
+<ul>
+<li>Select the &lsquo;Git Repositories&rsquo; window</li>
+<li>Add all files to &lsquo;staged changes&rsquo;</li>
+<li>Commit and push</li>
+<li>Dialog will ask &lsquo;origin&rsquo; repository&gt;
+<ul>
+<li>URI: https for the git repository in GitHub, <a href="https://github.com/apalhinha/snippet-collector.git">https://github.com/apalhinha/snippet-collector.git</a></li>
+<li>Host: Github.com</li>
+<li>Repository path: all from the URI, after github.com, /apalhinha/snippet-collector.git</li>
+<li>User and password needed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In Eclipse, create a README.md file
+<ul>
+<li>Menu File - New - File</li>
+<li>Select the &lsquo;snippet-collector [snippet-collector master] folder as parent folder</li>
+<li>Name the file README.md</li>
+<li>Type some content, its the entry point in the GitHub portal</li>
+</ul>
+</li>
+<li>In Eclipse, create a license file
+<ul>
+<li>Menu File - New - File</li>
+<li>Select the &lsquo;snippet-collector [snippet-collector master] folder as parent folder</li>
+<li>Name the file LICENSE</li>
+<li>Copy+paste the intended license text
+<ul>
+<li>Use <a href="https://choosealicense.com/">https://choosealicense.com/</a>{:target=&rdquo;_blank&rdquo;} to select the license</li>
+<li>In case you want the MIT License (permissive, copy-write notice o be kept), get it from <a href="https://choosealicense.com/licenses/mit/">https://choosealicense.com/licenses/mit/</a>{:target=&rdquo;_blank&rdquo;}</li>
+<li>Remember to fix the year and your name</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="read-materials">Read Materials</h1>
+<ul>
+<li>Key concepts appear in a <a href="https://www.youtube.com/watch?v=ptK9-CNms98">Youtube video</a> by TheChernoProject</li>
+<li>Eclipse, branch and merge with GitHub, <a href="https://www.youtube.com/watch?v=XuuzSaelUzo">Youtube video</a>{:target=&rdquo;_blank&rdquo;} from GitHub Training &amp; Guides collection
+<ul>
+<li>Video goes slow, yet good</li>
+<li>After cloning a GitHub repository, link it to an Eclipse project, in 12:23</li>
+<li>In Eclipse, create a branch, pull it to GitHub</li>
+<li>In GitHub, do a pull request, and accept the merge</li>
+<li>Back to Eclipse, pull from remote, to have the same base</li>
+</ul>
+</li>
+</ul>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/java/" rel="tag">Java</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/eclipse/" rel="tag">Eclipse</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/path-to-learn-java/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">A path to learn Java</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Andre.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

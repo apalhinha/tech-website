@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hugo and GitHub Pages from scratch, visible sources - Tech how-to, snippets, and collected tech recipes</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Hugo and GitHub Pages from scratch, visible sources" />
+<meta property="og:description" content="Create a new Github Pages site based on Hugo Creating a new GitHub Pages site based on Hugo, and following this page, assumes
+ A GitHub account exists Hugo is installed Git is installed A DNS tool is available to set the custom domain  Create local website cd above-project, and
+websites&gt; hugo new site workoutAdd a theme  Download the zip from https://github.com/Vimux/mainroad Inside there is a single folder." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/" />
+<meta property="article:published_time" content="2021-04-17T16:03:23+01:00" />
+<meta property="article:modified_time" content="2021-04-17T16:03:23+01:00" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Mainroad" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Mainroad</div>
+					<div class="logo__tagline">Tech how-to, snippets, and collected recipes</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Hugo and GitHub Pages from scratch, visible sources</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-17T16:03:23&#43;01:00">2021-04-17</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h2 id="create-a-new-github-pages-site-based-on-hugo">Create a new Github Pages site based on Hugo</h2>
+<p>Creating a new GitHub Pages site based on Hugo, and following this page, assumes</p>
+<ul>
+<li>A GitHub account exists</li>
+<li>Hugo is installed</li>
+<li>Git is installed</li>
+<li>A DNS tool is available to set the custom domain</li>
+</ul>
+<h2 id="create-local-website">Create local website</h2>
+<p>cd above-project, and</p>
+<pre><code>websites&gt; hugo new site workout
+</code></pre><h2 id="add-a-theme">Add a theme</h2>
+<ul>
+<li>Download the zip from <a href="https://github.com/Vimux/mainroad">https://github.com/Vimux/mainroad</a></li>
+<li>Inside there is a single folder. Copy it to &hellip;\workout\themes</li>
+<li>You will get someting like &hellip;\workout\themes\Mainroad-master</li>
+<li>Rename folder &ldquo;Mainroad-master&rdquo; to &ldquo;mainroad&rdquo;</li>
+</ul>
+<h2 id="change-to-the-website-folder">Change to the website folder.</h2>
+<p>All commands will happen here, from now on</p>
+<pre><code>websites&gt; cd workout
+websites\workout&gt;
+</code></pre><h2 id="tell-hugo-that-you-are-using-the-mainroad-theme">Tell Hugo that you are using the Mainroad theme</h2>
+<pre><code>websites\workout&gt; echo theme = &quot;mainroad&quot; &gt;&gt; config.toml
+</code></pre><h2 id="tell-hugo-to-publish-in-a-docs-folder">Tell hugo to publish in a &ldquo;docs&rdquo; folder</h2>
+<p>By default site would be published to &ldquo;public&rdquo;.
+This will be required by GitHug pages, ahead</p>
+<pre><code>websites\workout&gt; echo publishDir = &quot;docs&quot; &gt;&gt; config.toml
+</code></pre><h2 id="set-your-custom-url-as-basepath">Set your custom URL as basepath</h2>
+<p>Edit file config.toml in the website folder
+Change</p>
+<pre><code>baseURL = &quot;http://example.org/&quot;
+</code></pre><p>to</p>
+<pre><code>baseURL = &quot;http://your.custom.url.com/&quot;
+</code></pre><h2 id="create-a-first-post">Create a first post</h2>
+<pre><code>websites\workout&gt; hugo new blog\hello.md
+</code></pre><p>Edit content\blog\hello.md, put some text there
+Inside the file, remember to change</p>
+<pre><code>draft: false
+into
+draft: true
+</code></pre><p>This depends you the theme you are using</p>
+<h2 id="test-locally">Test locally</h2>
+<pre><code>websites\workout&gt; hugo server -D
+</code></pre><p>Open your browser, go to http://localhost:1313
+When you are done, stop the local server with Ctrl+C</p>
+<h2 id="publish-site-to-the-docs-folder">Publish site to the &ldquo;docs&rdquo; folder</h2>
+<pre><code>websites\workout&gt; hugo
+</code></pre><h2 id="greate-repository-workout">Greate repository workout</h2>
+<p>In Github, create a repository named workout
+do not &ldquo;Initialize this repository with a README&rdquo;</p>
+<h2 id="create-a-git-repository">Create a Git repository</h2>
+<p>Create a local Git repository and sync with the GitHub project</p>
+<pre><code>websites\workout&gt; git init
+websites\workout&gt; git add .
+websites\workout&gt; git commit -m &quot;first commit&quot;
+websites\workout&gt; git remote add origin https://github.com/apalhinha/workout.git
+websites\workout&gt; git push -u origin master
+</code></pre><h2 id="activate-github-pages">Activate GitHub Pages</h2>
+<p>In Github -&gt; settings -&gt; GitHub Pages
+Source = Master Branch / docs Folder
+Custom domain = workout.mycontributes.online</p>
+<h2 id="set-dns-settings-if-not-done-yet">Set DNS settings if not done yet</h2>
+<p>Access your DNS manager and add a CNAME</p>
+<ul>
+<li>Name = yoursite.yourdomain.com</li>
+<li>alias = yourgithubname.github.io</li>
+</ul>
+<h2 id="github-settings-are-changed-the-remote-repository">Github settings are changed the remote repository.</h2>
+<p>Bring those changes to the local copy</p>
+<pre><code>workout\public&gt; git pull origin
+</code></pre><h2 id="now-change-your-website">Now change your website</h2>
+<p>Use your favorite editor.
+Update pages under &ldquo;content&rdquo; folder</p>
+<p>When you want to see, check in the local machine</p>
+<pre><code>workout&gt; hugo server -D (include pages flagged as draft)
+or
+workout&gt; hugo server    (drafts are kept away, same that will be published)
+</code></pre><h2 id="happy-publish">Happy? Publish</h2>
+<p>When happy with the new content, publish, commit to git, and push to the remote repository</p>
+<pre><code>workout\public&gt; hugo
+workout\public&gt; git add .
+workout\public&gt; git commit -m &quot;commit&quot;
+workout\public&gt; git push origin master
+</code></pre><p>Sometimes it takes a few minutes for GitHub Pages to display the updated content</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/github-pages/" rel="tag">GitHub Pages</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/hugo/sitemap/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Sitemap in Hugo static page generator</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Andre.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

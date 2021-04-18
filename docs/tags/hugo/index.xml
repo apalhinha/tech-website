@@ -6,10 +6,21 @@
     <description>Recent content in Hugo on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 16:03:23 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 17 Apr 2021 16:03:23 +0100</lastBuildDate>
     
 	<atom:link href="http://tech.mycontributes.online/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo and GitHub Pages from scratch, visible sources</title>
+      <link>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</link>
+      <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</guid>
+      <description>Create a new Github Pages site based on Hugo Creating a new GitHub Pages site based on Hugo, and following this page, assumes
+ A GitHub account exists Hugo is installed Git is installed A DNS tool is available to set the custom domain  Create local website cd above-project, and
+websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https://github.com/Vimux/mainroad Inside there is a single folder.</description>
+    </item>
     
     <item>
       <title>Sitemap in Hugo static page generator</title>
@@ -30,7 +41,7 @@
     </item>
     
     <item>
-      <title>Hugo from scratch, GitHub Pages, hidden sources</title>
+      <title>Hugo from scratch on GitHub Pages, hidden sources</title>
       <link>http://tech.mycontributes.online/hugo/hugo-from-scratch/</link>
       <pubDate>Tue, 30 Mar 2021 16:03:23 +0100</pubDate>
       

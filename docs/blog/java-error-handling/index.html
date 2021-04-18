@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pattern for Error Handling in Java - Tech how-to, snippets, and collected tech recipes</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Pattern for Error Handling in Java" />
+<meta property="og:description" content="Principles
+
+At high-level, errors are innocuous. Worst case scenario nothing happened and the user can try again.
+The lowest level will show the stack-dump, not others.
+TODO: After an error, the upper levels should display their context information in a nicer format. Includes re-create the stack-dump
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tech.mycontributes.online/blog/java-error-handling/" />
+<meta property="article:published_time" content="2021-04-17T16:03:21+01:00" />
+<meta property="article:modified_time" content="2021-04-17T16:03:21+01:00" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Mainroad" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Mainroad</div>
+					<div class="logo__tagline">Tech how-to, snippets, and collected recipes</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Pattern for Error Handling in Java</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-17T16:03:21&#43;01:00">2021-04-17</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="principles">Principles</h1>
+<ul>
+<li>At high-level, errors are innocuous. Worst case scenario nothing happened and the user can try again.</li>
+<li>The lowest level will show the stack-dump, not others.</li>
+<li>TODO: After an error, the upper levels should display their context information in a nicer format. Includes re-create the stack-dump</li>
+</ul>
+<h1 id="top-level-where-errors-are-innocuous">Top level, where errors are innocuous</h1>
+<p>At top level an error keeps the user state as it was before.
+The user will decide whether to retry, or quit.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">toplevel</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">// Acts as the top level for the error handler, no more throws from here but log is updated
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+		do_something<span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		MyLog<span style="color:#f92672">.</span><span style="color:#a6e22e">exceptionTop</span><span style="color:#f92672">(</span>e<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+	<span style="color:#66d9ef">return</span> <span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h1 id="inner-level-log-stack-and-context">Inner level, log stack and context</h1>
+<p>Every other function will throw an error to the upper level.
+The message log function will know whether the stack-trace should be listed or not.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">do_something</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// do stuff, logic, and calls
+</span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// Log the error, throw new exception for upper level
+</span><span style="color:#75715e"></span>		MyLog<span style="color:#f92672">.</span><span style="color:#a6e22e">exception</span><span style="color:#f92672">(</span>e<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Optional context information&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+	<span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The <code>MyLog.Exception</code> will decide when to print the stack-dump</p>
+<h1 id="log-and-alreadyhandled-exception">Log and AlreadyHandled Exception</h1>
+<p>This requires an AlreadyHandledExeption object type, used to throw and inhibit the stack-dump</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AlreadyHandledException</span> <span style="color:#66d9ef">extends</span> Exception<span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> serialVersionUID <span style="color:#f92672">=</span> 1L<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>And the MyLog object</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> info.trustzone.logger<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.logging.*<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyLog</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">static</span> Logger logger<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">public</span> Handler fileHandler<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> SimpleFormatter plainText<span style="color:#f92672">;</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">MyLog</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+		logger <span style="color:#f92672">=</span> Logger<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">(</span>MyLog<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+		fileHandler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileHandler<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;errorlog.txt&#34;</span><span style="color:#f92672">,</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+		plainText <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleFormatter<span style="color:#f92672">();</span>
+		fileHandler<span style="color:#f92672">.</span><span style="color:#a6e22e">setFormatter</span><span style="color:#f92672">(</span>plainText<span style="color:#f92672">);</span>
+		logger<span style="color:#f92672">.</span><span style="color:#a6e22e">addHandler</span><span style="color:#f92672">(</span>fileHandler<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Logger <span style="color:#a6e22e">getLogger</span><span style="color:#f92672">(){</span>
+	    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>logger <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+	        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+	            <span style="color:#66d9ef">new</span> MyLog<span style="color:#f92672">();</span>
+	        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+	        <span style="color:#f92672">}</span>
+	    <span style="color:#f92672">}</span>
+	    <span style="color:#66d9ef">return</span> logger<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">info</span><span style="color:#f92672">(</span>String msg<span style="color:#f92672">){</span>
+	    getLogger<span style="color:#f92672">().</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span>Level<span style="color:#f92672">.</span><span style="color:#a6e22e">INFO</span><span style="color:#f92672">,</span> msg<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exception</span><span style="color:#f92672">(</span>Exception e<span style="color:#f92672">,</span> String message<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">boolean</span> isMyException<span style="color:#f92672">;</span>		
+		isMyException <span style="color:#f92672">=</span> e <span style="color:#66d9ef">instanceof</span> AlreadyHandledException<span style="color:#f92672">;</span>
+
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isMyException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// Stack trace was already written, missing the context information
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>message<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()&gt;</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+				getLogger<span style="color:#f92672">().</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span>Level<span style="color:#f92672">.</span><span style="color:#a6e22e">SEVERE</span><span style="color:#f92672">,</span> message<span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span>
+			<span style="color:#66d9ef">throw</span> <span style="color:#f92672">(</span>AlreadyHandledException<span style="color:#f92672">)</span>e<span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>  <span style="color:#75715e">// Lowest level. Stack trace is needed
+</span><span style="color:#75715e"></span>			<span style="color:#75715e">// TODO: Nicer Stack trace here
+</span><span style="color:#75715e"></span>			getLogger<span style="color:#f92672">().</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span>Level<span style="color:#f92672">.</span><span style="color:#a6e22e">SEVERE</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">(),</span> e<span style="color:#f92672">);</span>
+			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>message<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()&gt;</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+				<span style="color:#75715e">// Developer included context information, to be shown.
+</span><span style="color:#75715e"></span>				getLogger<span style="color:#f92672">().</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span>Level<span style="color:#f92672">.</span><span style="color:#a6e22e">SEVERE</span><span style="color:#f92672">,</span> message<span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span>
+			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> AlreadyHandledException<span style="color:#f92672">();</span> <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/java/" rel="tag">Java</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/path-to-learn-java/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">A path to learn Java</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Andre.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "Hugo from scratch, GitHub Pages, hidden sources"
+title: "Hugo from scratch on GitHub Pages, hidden sources"
 date: 2021-03-30T16:03:23+01:00
 draft: false
 tags: ["Hugo"]

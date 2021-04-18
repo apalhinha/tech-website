@@ -6,10 +6,65 @@
     <description>Recent content on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 16:03:23 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 17 Apr 2021 16:03:23 +0100</lastBuildDate>
     
 	<atom:link href="http://tech.mycontributes.online/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git and GitHub, from scratch</title>
+      <link>http://tech.mycontributes.online/git-and-github/</link>
+      <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/git-and-github/</guid>
+      <description>Creat a Github repository  Do this in the Github interface do not &amp;ldquo;Initialize this repository with a README&amp;rdquo;  Create a Git repository git initgit add .git commit -m &amp;quot;first commit&amp;quot;Link the local folder with a Github project git remote add origin https://github.com/github-user/github-project.gitgit push -u origin masterCommit locally, push to Github Do this after changing files
+git add .git commit -m &amp;quot;commit&amp;quot;git push origin masterCreate and activate an hotfix branch git branch a_hotfix # create branchgit checkout a_hotfix # activate branch(do changes in the branch)</description>
+    </item>
+    
+    <item>
+      <title>Hugo and GitHub Pages from scratch, visible sources</title>
+      <link>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</link>
+      <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</guid>
+      <description>Create a new Github Pages site based on Hugo Creating a new GitHub Pages site based on Hugo, and following this page, assumes
+ A GitHub account exists Hugo is installed Git is installed A DNS tool is available to set the custom domain  Create local website cd above-project, and
+websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https://github.com/Vimux/mainroad Inside there is a single folder.</description>
+    </item>
+    
+    <item>
+      <title>New Java project, Eclipse and GitHub</title>
+      <link>http://tech.mycontributes.online/blog/eclipse-new-github/</link>
+      <pubDate>Sat, 17 Apr 2021 16:03:22 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/blog/eclipse-new-github/</guid>
+      <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
+&lt;p&gt;These steps were followed to create a totally new Eclipse project, in sync with GitHub&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A path to learn Java</title>
+      <link>http://tech.mycontributes.online/blog/path-to-learn-java/</link>
+      <pubDate>Sat, 17 Apr 2021 16:03:21 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/blog/path-to-learn-java/</guid>
+      <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
+&lt;p&gt;These are the key steps I used to learn Java&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pattern for Error Handling in Java</title>
+      <link>http://tech.mycontributes.online/blog/java-error-handling/</link>
+      <pubDate>Sat, 17 Apr 2021 16:03:21 +0100</pubDate>
+      
+      <guid>http://tech.mycontributes.online/blog/java-error-handling/</guid>
+      <description>&lt;h1 id=&#34;principles&#34;&gt;Principles&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;At high-level, errors are innocuous. Worst case scenario nothing happened and the user can try again.&lt;/li&gt;
+&lt;li&gt;The lowest level will show the stack-dump, not others.&lt;/li&gt;
+&lt;li&gt;TODO: After an error, the upper levels should display their context information in a nicer format. Includes re-create the stack-dump&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Sitemap in Hugo static page generator</title>
@@ -30,7 +85,7 @@
     </item>
     
     <item>
-      <title>Hugo from scratch, GitHub Pages, hidden sources</title>
+      <title>Hugo from scratch on GitHub Pages, hidden sources</title>
       <link>http://tech.mycontributes.online/hugo/hugo-from-scratch/</link>
       <pubDate>Tue, 30 Mar 2021 16:03:23 +0100</pubDate>
       

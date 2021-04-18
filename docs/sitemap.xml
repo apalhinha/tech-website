@@ -3,27 +3,82 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://tech.mycontributes.online/tags/git/</loc>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/git-and-github/</loc>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/tags/github/</loc>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/tags/github-pages/</loc>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tech.mycontributes.online/tags/hugo/</loc>
-    <lastmod>2021-04-09T16:03:23+01:00</lastmod>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</loc>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://tech.mycontributes.online/hugo/</loc>
-    <lastmod>2021-04-09T16:03:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tech.mycontributes.online/hugo/sitemap/</loc>
-    <lastmod>2021-04-09T16:03:23+01:00</lastmod>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://tech.mycontributes.online/tags/</loc>
-    <lastmod>2021-04-09T16:03:23+01:00</lastmod>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://tech.mycontributes.online/</loc>
+    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/blog/</loc>
+    <lastmod>2021-04-17T16:03:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/tags/eclipse/</loc>
+    <lastmod>2021-04-17T16:03:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/tags/java/</loc>
+    <lastmod>2021-04-17T16:03:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/blog/eclipse-new-github/</loc>
+    <lastmod>2021-04-17T16:03:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/blog/path-to-learn-java/</loc>
+    <lastmod>2021-04-17T16:03:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/blog/java-error-handling/</loc>
+    <lastmod>2021-04-17T16:03:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/hugo/sitemap/</loc>
     <lastmod>2021-04-09T16:03:23+01:00</lastmod>
   </url>
   
