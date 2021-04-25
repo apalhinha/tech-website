@@ -223,3 +223,25 @@ There are distinct instructions to redirect a sub-domain such as www.example.com
 See GitHub documentation in https://docs.github.com/pt/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site
 
 Visit GitHub settings page and set the "Enforce https" flag.
+
+23. Ensure any updates to the theme are reflected in your copy
+
+Change to the submodule directory
+```
+cd themes\mainroad
+```
+
+Checkout desired branch
+```
+git checkout master
+```
+
+Update your copy based from the remote one
+```
+git pull
+```
+
+Get back to your project root
+```
+cd ..\..
+```

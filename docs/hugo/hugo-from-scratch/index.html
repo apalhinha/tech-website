@@ -230,6 +230,18 @@ all-sites\mysite\hugo\&gt; git subtree push --prefix public https://github.com/m
 <p>There are distinct instructions to redirect a sub-domain such as <a href="http://www.example.com">www.example.com</a>.
 See GitHub documentation in <a href="https://docs.github.com/pt/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">https://docs.github.com/pt/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site</a></p>
 <p>Visit GitHub settings page and set the &ldquo;Enforce https&rdquo; flag.</p>
+<ol start="23">
+<li>Ensure any updates to the theme are reflected in your copy</li>
+</ol>
+<p>Change to the submodule directory</p>
+<pre><code>cd themes\mainroad
+</code></pre><p>Checkout desired branch</p>
+<pre><code>git checkout master
+</code></pre><p>Update your copy based from the remote one</p>
+<pre><code>git pull
+</code></pre><p>Get back to your project root</p>
+<pre><code>cd ..\..
+</code></pre>
 		</div>
 		<footer class="post__footer">
 			

@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://tech.mycontributes.online/blog/dns-github-pages-analytics/</loc>
+    <lastmod>2021-04-18T09:52:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/blog/</loc>
+    <lastmod>2021-04-18T09:52:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tech.mycontributes.online/</loc>
+    <lastmod>2021-04-18T09:52:46+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://tech.mycontributes.online/tags/git/</loc>
     <lastmod>2021-04-17T16:03:23+01:00</lastmod>
   </url>
@@ -40,16 +55,6 @@
   <url>
     <loc>http://tech.mycontributes.online/tags/</loc>
     <lastmod>2021-04-17T16:03:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tech.mycontributes.online/</loc>
-    <lastmod>2021-04-17T16:03:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://tech.mycontributes.online/blog/</loc>
-    <lastmod>2021-04-17T16:03:22+01:00</lastmod>
   </url>
   
   <url>

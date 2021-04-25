@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>A configuration for DNS, Github Pages and Google Analytics - Tech how-to, snippets, and collected tech recipes</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="A configuration for DNS, Github Pages and Google Analytics" />
+<meta property="og:description" content="Used configurations for a web-site hosted in GitHub Pages, in an Apex (top-level) domain
+
+Site is yourdomain.com
+A redirect from www.yourdomain.com
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tech.mycontributes.online/blog/dns-github-pages-analytics/" />
+<meta property="article:published_time" content="2021-04-18T09:52:46+01:00" />
+<meta property="article:modified_time" content="2021-04-18T09:52:46+01:00" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Mainroad" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Mainroad</div>
+					<div class="logo__tagline">Tech how-to, snippets, and collected recipes</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">A configuration for DNS, Github Pages and Google Analytics</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-18T09:52:46&#43;01:00">2021-04-18</time></div></div>
+		</header><div class="content post__content clearfix">
+			<p>Used configurations for a web-site hosted in GitHub Pages, in an Apex (top-level) domain</p>
+<ul>
+<li>Site is yourdomain.com</li>
+<li>A redirect from <span>www.yourdomain.com</span></li>
+</ul>
+<h1 id="github-configurations">GitHub configurations</h1>
+<ul>
+<li>Activate GitHub Pages</li>
+<li>Fill-in CNAME. Should contain the single word <span>yourdomain.com</span></li>
+</ul>
+<pre><code>yourdomain.com
+</code></pre><h1 id="dns-configurations">DNS configurations</h1>
+<ul>
+<li>4 Distinct A-Records on <span>yourdomain.com</span> with the GitHub Pages IPs as per <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank">GitHub documentation</a>
+. Urls are
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+</li>
+<li>Similar 4 records for <span>www.yourdomain.com</span>, so that www redirects to the top level domain</li>
+</ul>
+<h1 id="hugo-configuration">Hugo configuration</h1>
+<p>Set the baseurl setting to the Apex domain, in config.toml</p>
+<pre><code>baseurl = &quot;https://yourdomain.com/&quot;
+</code></pre><p>Ensure your template has a &ldquo;base&rdquo; definition in the baseof file. This will avoid &ldquo;http links inside a https site&rdquo; errors</p>
+<pre><code>&lt;head&gt;
+...
+&lt;base href=&quot;{{ .Site.BaseURL }}&quot;&gt; &lt;!-- added this base --&gt;
+&lt;/head&gt;
+</code></pre><h1 id="search-analytics">Search Analytics</h1>
+<p>Set a google-search property in the <a href="https://search.google.com/search-console" target="_blank">Search Console</a>
+</p>
+<p>Used a &ldquo;Domain property&rdquo; with a txt file in DNS for verifications. Instructions are there when you do &ldquo;Add Property&rdquo; in the Search Console</p>
+<p>Fill-in the sitemap filename</p>
+<h1 id="analytics">Analytics</h1>
+<p>Create a Universal Property, set it in the config.toml file as per your theme instructions</p>
+<p>Connect the analitics property to the Search Console property. Do this in the &ldquo;product linking&rdquo; menu</p>
+		</div>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/eclipse-new-github/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">New Java project, Eclipse and GitHub</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Andre.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
