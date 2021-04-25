@@ -224,24 +224,18 @@ See GitHub documentation in https://docs.github.com/pt/github/working-with-githu
 
 Visit GitHub settings page and set the "Enforce https" flag.
 
-23. Ensure any updates to the theme are reflected in your copy
+# Ensure any updates to the theme are reflected in your copy
 
-Change to the submodule directory
-```
-cd themes\mainroad
-```
+23. Pull the theme sources overwriting your local copy
 
-Checkout desired branch
 ```
-git checkout master
-```
-
-Update your copy based from the remote one
-```
-git pull
-```
-
-Get back to your project root
-```
-cd ..\..
+                                        # Change to the submodule directory
+all-sites\mysite\hugo\> cd themes\mainroad
+                                        # Checkout desired branch
+all-sites\mysite\hugo\themes\mainroad\> git checkout master
+                                        # Update your copy based from the remote one
+all-sites\mysite\hugo\themes\mainroad\> git pull
+                                        # Get back to your project root
+all-sites\mysite\hugo\themes\mainroad\> cd ..\..
+all-sites\mysite\hugo\>
 ```
