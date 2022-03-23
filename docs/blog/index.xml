@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Tech how-to, snippets, and collected tech recipes</title>
-    <link>http://tech.mycontributes.online/blog/</link>
+    <link>http://developper.mycontributes.com/blog/</link>
     <description>Recent content in Blogs on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Apr 2021 09:52:46 +0100</lastBuildDate>
     
-	<atom:link href="http://tech.mycontributes.online/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://developper.mycontributes.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A configuration for DNS, Github Pages and Google Analytics</title>
-      <link>http://tech.mycontributes.online/blog/dns-github-pages-analytics/</link>
+      <link>http://developper.mycontributes.com/blog/dns-github-pages-analytics/</link>
       <pubDate>Sun, 18 Apr 2021 09:52:46 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/dns-github-pages-analytics/</guid>
+      <guid>http://developper.mycontributes.com/blog/dns-github-pages-analytics/</guid>
       <description>&lt;p&gt;Used configurations for a web-site hosted in GitHub Pages, in an Apex (top-level) domain&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Site is yourdomain.com&lt;/li&gt;
@@ -26,30 +26,30 @@
     
     <item>
       <title>New Java project, Eclipse and GitHub</title>
-      <link>http://tech.mycontributes.online/blog/eclipse-new-github/</link>
+      <link>http://developper.mycontributes.com/blog/eclipse-new-github/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:22 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/eclipse-new-github/</guid>
+      <guid>http://developper.mycontributes.com/blog/eclipse-new-github/</guid>
       <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
 &lt;p&gt;These steps were followed to create a totally new Eclipse project, in sync with GitHub&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>A path to learn Java</title>
-      <link>http://tech.mycontributes.online/blog/path-to-learn-java/</link>
+      <link>http://developper.mycontributes.com/blog/path-to-learn-java/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:21 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/path-to-learn-java/</guid>
+      <guid>http://developper.mycontributes.com/blog/path-to-learn-java/</guid>
       <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
 &lt;p&gt;These are the key steps I used to learn Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pattern for Error Handling in Java</title>
-      <link>http://tech.mycontributes.online/blog/java-error-handling/</link>
+      <link>http://developper.mycontributes.com/blog/java-error-handling/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:21 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/java-error-handling/</guid>
+      <guid>http://developper.mycontributes.com/blog/java-error-handling/</guid>
       <description>&lt;h1 id=&#34;principles&#34;&gt;Principles&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;At high-level, errors are innocuous. Worst case scenario nothing happened and the user can try again.&lt;/li&gt;

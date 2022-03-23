@@ -3,7 +3,9 @@
 if [%1]==[] goto noarg
 
 echo on
-echo tech.mycontributes.online > docs\CNAME
+rm -R --force public\docs
+mkdir public\docs
+echo developer.mycontributes.com > public\docs\CNAME
 @pause
 hugo
 @pause
@@ -17,5 +19,3 @@ git push origin master
 echo Use: %0 "commit message"
 
 :done
-
-

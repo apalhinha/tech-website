@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech how-to, snippets, and collected tech recipes</title>
-    <link>http://tech.mycontributes.online/</link>
+    <link>http://developper.mycontributes.com/</link>
     <description>Recent content on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Apr 2021 09:52:46 +0100</lastBuildDate>
     
-	<atom:link href="http://tech.mycontributes.online/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://developper.mycontributes.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A configuration for DNS, Github Pages and Google Analytics</title>
-      <link>http://tech.mycontributes.online/blog/dns-github-pages-analytics/</link>
+      <link>http://developper.mycontributes.com/blog/dns-github-pages-analytics/</link>
       <pubDate>Sun, 18 Apr 2021 09:52:46 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/dns-github-pages-analytics/</guid>
+      <guid>http://developper.mycontributes.com/blog/dns-github-pages-analytics/</guid>
       <description>&lt;p&gt;Used configurations for a web-site hosted in GitHub Pages, in an Apex (top-level) domain&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Site is yourdomain.com&lt;/li&gt;
@@ -26,20 +26,20 @@
     
     <item>
       <title>Git and GitHub, from scratch</title>
-      <link>http://tech.mycontributes.online/git-and-github/</link>
+      <link>http://developper.mycontributes.com/git-and-github/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/git-and-github/</guid>
+      <guid>http://developper.mycontributes.com/git-and-github/</guid>
       <description>Creat a Github repository  Do this in the Github interface do not &amp;ldquo;Initialize this repository with a README&amp;rdquo;  Create a Git repository git initgit add .git commit -m &amp;quot;first commit&amp;quot;Link the local folder with a Github project git remote add origin https://github.com/github-user/github-project.gitgit push -u origin masterCommit locally, push to Github Do this after changing files
 git add .git commit -m &amp;quot;commit&amp;quot;git push origin masterCreate and activate an hotfix branch git branch a_hotfix # create branchgit checkout a_hotfix # activate branch(do changes in the branch)</description>
     </item>
     
     <item>
       <title>Hugo and GitHub Pages from scratch, visible sources</title>
-      <link>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</link>
+      <link>http://developper.mycontributes.com/hugo/hugo-and-git-hub-pages-from-scratch/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</guid>
+      <guid>http://developper.mycontributes.com/hugo/hugo-and-git-hub-pages-from-scratch/</guid>
       <description>Create a new Github Pages site based on Hugo Creating a new GitHub Pages site based on Hugo, and following this page, assumes
  A GitHub account exists Hugo is installed Git is installed A DNS tool is available to set the custom domain  Create local website cd above-project, and
 websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https://github.com/Vimux/mainroad Inside there is a single folder.</description>
@@ -47,30 +47,30 @@ websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https:
     
     <item>
       <title>New Java project, Eclipse and GitHub</title>
-      <link>http://tech.mycontributes.online/blog/eclipse-new-github/</link>
+      <link>http://developper.mycontributes.com/blog/eclipse-new-github/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:22 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/eclipse-new-github/</guid>
+      <guid>http://developper.mycontributes.com/blog/eclipse-new-github/</guid>
       <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
 &lt;p&gt;These steps were followed to create a totally new Eclipse project, in sync with GitHub&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>A path to learn Java</title>
-      <link>http://tech.mycontributes.online/blog/path-to-learn-java/</link>
+      <link>http://developper.mycontributes.com/blog/path-to-learn-java/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:21 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/path-to-learn-java/</guid>
+      <guid>http://developper.mycontributes.com/blog/path-to-learn-java/</guid>
       <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
 &lt;p&gt;These are the key steps I used to learn Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pattern for Error Handling in Java</title>
-      <link>http://tech.mycontributes.online/blog/java-error-handling/</link>
+      <link>http://developper.mycontributes.com/blog/java-error-handling/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:21 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/blog/java-error-handling/</guid>
+      <guid>http://developper.mycontributes.com/blog/java-error-handling/</guid>
       <description>&lt;h1 id=&#34;principles&#34;&gt;Principles&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;At high-level, errors are innocuous. Worst case scenario nothing happened and the user can try again.&lt;/li&gt;
@@ -81,28 +81,28 @@ websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https:
     
     <item>
       <title>Sitemap in Hugo static page generator</title>
-      <link>http://tech.mycontributes.online/hugo/sitemap/</link>
+      <link>http://developper.mycontributes.com/hugo/sitemap/</link>
       <pubDate>Fri, 09 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/sitemap/</guid>
+      <guid>http://developper.mycontributes.com/hugo/sitemap/</guid>
       <description>&lt;p&gt;Hugo generates a default sitemap for your site containing all pages and links. Such sitemap can be customized.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shortcodes in Hugo static page generator</title>
-      <link>http://tech.mycontributes.online/hugo/shortcodes/</link>
+      <link>http://developper.mycontributes.com/hugo/shortcodes/</link>
       <pubDate>Wed, 31 Mar 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/shortcodes/</guid>
+      <guid>http://developper.mycontributes.com/hugo/shortcodes/</guid>
       <description>&lt;p&gt;Shortcodes are used in .md files. They are a form of customizing the resulting html whenever the .md format does not gives what you need.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo from scratch on GitHub Pages, hidden sources</title>
-      <link>http://tech.mycontributes.online/hugo/hugo-from-scratch/</link>
+      <link>http://developper.mycontributes.com/hugo/hugo-from-scratch/</link>
       <pubDate>Tue, 30 Mar 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/hugo-from-scratch/</guid>
+      <guid>http://developper.mycontributes.com/hugo/hugo-from-scratch/</guid>
       <description>&lt;p&gt;Instructions to build an Hugo site from scratch, manage it with git, and publish in GitHub Pages. In this scenario only the result files are being uploaded to Github Pages, not the source files.&lt;/p&gt;
 &lt;p&gt;The source files themselves are also in git. Intentionally the scenario is not publishing those sources publicly in GitHub.&lt;/p&gt;</description>
     </item>

@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tech how-to, snippets, and collected tech recipes</title>
-    <link>http://tech.mycontributes.online/tags/</link>
+    <link>http://developper.mycontributes.com/tags/</link>
     <description>Recent content in Tags on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Apr 2021 16:03:23 +0100</lastBuildDate>
     
-	<atom:link href="http://tech.mycontributes.online/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://developper.mycontributes.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git</title>
-      <link>http://tech.mycontributes.online/tags/git/</link>
+      <link>http://developper.mycontributes.com/tags/git/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/tags/git/</guid>
+      <guid>http://developper.mycontributes.com/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHub</title>
-      <link>http://tech.mycontributes.online/tags/github/</link>
+      <link>http://developper.mycontributes.com/tags/github/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/tags/github/</guid>
+      <guid>http://developper.mycontributes.com/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHub Pages</title>
-      <link>http://tech.mycontributes.online/tags/github-pages/</link>
+      <link>http://developper.mycontributes.com/tags/github-pages/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/tags/github-pages/</guid>
+      <guid>http://developper.mycontributes.com/tags/github-pages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://tech.mycontributes.online/tags/hugo/</link>
+      <link>http://developper.mycontributes.com/tags/hugo/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/tags/hugo/</guid>
+      <guid>http://developper.mycontributes.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Eclipse</title>
-      <link>http://tech.mycontributes.online/tags/eclipse/</link>
+      <link>http://developper.mycontributes.com/tags/eclipse/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:22 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/tags/eclipse/</guid>
+      <guid>http://developper.mycontributes.com/tags/eclipse/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>http://tech.mycontributes.online/tags/java/</link>
+      <link>http://developper.mycontributes.com/tags/java/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:22 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/tags/java/</guid>
+      <guid>http://developper.mycontributes.com/tags/java/</guid>
       <description></description>
     </item>
     

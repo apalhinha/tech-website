@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub on Tech how-to, snippets, and collected tech recipes</title>
-    <link>http://tech.mycontributes.online/tags/github/</link>
+    <link>http://developper.mycontributes.com/tags/github/</link>
     <description>Recent content in GitHub on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Apr 2021 16:03:23 +0100</lastBuildDate>
     
-	<atom:link href="http://tech.mycontributes.online/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://developper.mycontributes.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git and GitHub, from scratch</title>
-      <link>http://tech.mycontributes.online/git-and-github/</link>
+      <link>http://developper.mycontributes.com/git-and-github/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/git-and-github/</guid>
+      <guid>http://developper.mycontributes.com/git-and-github/</guid>
       <description>Creat a Github repository  Do this in the Github interface do not &amp;ldquo;Initialize this repository with a README&amp;rdquo;  Create a Git repository git initgit add .git commit -m &amp;quot;first commit&amp;quot;Link the local folder with a Github project git remote add origin https://github.com/github-user/github-project.gitgit push -u origin masterCommit locally, push to Github Do this after changing files
 git add .git commit -m &amp;quot;commit&amp;quot;git push origin masterCreate and activate an hotfix branch git branch a_hotfix # create branchgit checkout a_hotfix # activate branch(do changes in the branch)</description>
     </item>

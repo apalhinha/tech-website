@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugos on Tech how-to, snippets, and collected tech recipes</title>
-    <link>http://tech.mycontributes.online/hugo/</link>
+    <link>http://developper.mycontributes.com/hugo/</link>
     <description>Recent content in Hugos on Tech how-to, snippets, and collected tech recipes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Apr 2021 16:03:23 +0100</lastBuildDate>
     
-	<atom:link href="http://tech.mycontributes.online/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://developper.mycontributes.com/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo and GitHub Pages from scratch, visible sources</title>
-      <link>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</link>
+      <link>http://developper.mycontributes.com/hugo/hugo-and-git-hub-pages-from-scratch/</link>
       <pubDate>Sat, 17 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/hugo-and-git-hub-pages-from-scratch/</guid>
+      <guid>http://developper.mycontributes.com/hugo/hugo-and-git-hub-pages-from-scratch/</guid>
       <description>Create a new Github Pages site based on Hugo Creating a new GitHub Pages site based on Hugo, and following this page, assumes
  A GitHub account exists Hugo is installed Git is installed A DNS tool is available to set the custom domain  Create local website cd above-project, and
 websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https://github.com/Vimux/mainroad Inside there is a single folder.</description>
@@ -24,28 +24,28 @@ websites&amp;gt; hugo new site workoutAdd a theme  Download the zip from https:
     
     <item>
       <title>Sitemap in Hugo static page generator</title>
-      <link>http://tech.mycontributes.online/hugo/sitemap/</link>
+      <link>http://developper.mycontributes.com/hugo/sitemap/</link>
       <pubDate>Fri, 09 Apr 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/sitemap/</guid>
+      <guid>http://developper.mycontributes.com/hugo/sitemap/</guid>
       <description>&lt;p&gt;Hugo generates a default sitemap for your site containing all pages and links. Such sitemap can be customized.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shortcodes in Hugo static page generator</title>
-      <link>http://tech.mycontributes.online/hugo/shortcodes/</link>
+      <link>http://developper.mycontributes.com/hugo/shortcodes/</link>
       <pubDate>Wed, 31 Mar 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/shortcodes/</guid>
+      <guid>http://developper.mycontributes.com/hugo/shortcodes/</guid>
       <description>&lt;p&gt;Shortcodes are used in .md files. They are a form of customizing the resulting html whenever the .md format does not gives what you need.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo from scratch on GitHub Pages, hidden sources</title>
-      <link>http://tech.mycontributes.online/hugo/hugo-from-scratch/</link>
+      <link>http://developper.mycontributes.com/hugo/hugo-from-scratch/</link>
       <pubDate>Tue, 30 Mar 2021 16:03:23 +0100</pubDate>
       
-      <guid>http://tech.mycontributes.online/hugo/hugo-from-scratch/</guid>
+      <guid>http://developper.mycontributes.com/hugo/hugo-from-scratch/</guid>
       <description>&lt;p&gt;Instructions to build an Hugo site from scratch, manage it with git, and publish in GitHub Pages. In this scenario only the result files are being uploaded to Github Pages, not the source files.&lt;/p&gt;
 &lt;p&gt;The source files themselves are also in git. Intentionally the scenario is not publishing those sources publicly in GitHub.&lt;/p&gt;</description>
     </item>

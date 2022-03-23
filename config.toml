@@ -1,4 +1,4 @@
-baseurl = "http://tech.mycontributes.online"
+baseurl = "http://developper.mycontributes.com"
 title = "Tech how-to, snippets, and collected tech recipes"
 publishDir = "docs"
 languageCode = "en-us"
